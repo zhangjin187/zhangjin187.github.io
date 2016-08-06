@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;padding:0;
+			}
+			body{
+				transform-style: preserve-3d;
+			}
+			.wrap{
+				animation: cube 5s linear infinite;
+				width: 200px;
+				height: 200px;
+				margin:0 auto;
+				position: relative;
+				transform-style: preserve-3d;
+				transform-origin: center center;
+			}
+			@keyframes cube{
+				from{transform:rotateY(0deg) translateZ(0px)}
+				to{transform:rotateY(360deg) translateZ(200px)}
+			}
+			.wrap div{
+				width: 200px;
+				height: 200px;
+				opacity: 0.5;
+				position: absolute;
+			}
+			.div1{
+				background-color: red;
+			}
+			.div2{
+				background-color: yellow;
+				transform:translateZ(-200px)
+			}
+			.div3{
+				background-color: deepskyblue;
+				transform: rotateY(-90deg) translateX(-100px) translatez(-100px);
+				
+			}
+			.div4{
+				background-color: silver;
+				transform: rotateY(-90deg) translateX(-100px) translatez(100px);
+			}
+			.div5{
+				background-color: blueviolet;
+				transform: rotateX(-90deg) translateY(100px) translatez(100px);
+			}
+			.div6{
+				background-color: lawngreen;
+				transform: rotateX(-90deg) translateY(100px) translatez(-100px);
+			}
+			.bar{
+				width: 200px;
+				height: 15px;
+				position: relative;
+				background-color: #666;
+				margin:20px auto;
+			}
+			.roller{
+				width: 20px;
+				height: 15px;
+				position: absolute;
+				background-color: tomato;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="div1"></div>
+			<div class="div2"></div>
+			<div class="div3"></div>
+			<div class="div4"></div>
+			<div class="div5"></div>
+			<div class="div6"></div>
+		</div>
+		<div class="bar">
+			<div class="roller"></div>
+		</div>
+		<script type="text/javascript">
+			var roller=document.querySelector(".roller")
+			var bar =document.querySelector(".bar")
+			var wrap=document.querySelector(".wrap")
+			roller.onmousedown=function (e) {
+				var e=e||window.event
+				var clickX=e.layerX
+				var clickY=e.layerY
+				var sliderLeft = 0;   //存放的是slider的top值
+				var maxNum =bar.offsetWidth-roller.offsetWidth 
+				wrap.style.animationName="cube1"				
+				function moveFn(){
+					if(sliderLeft <= 0){
+						sliderLeft = 0;
+					}else if(sliderLeft >= maxNum){
+						sliderLeft = maxNum;
+					}
+					roller.style.left = sliderLeft + 'px';
+					var rate = roller.offsetwidth / maxNum;
+					wrap.style.transform="rotateY("+360*(roller.offsetLeft/ maxNum) +"deg) translateZ("+200*(roller.offsetLeft/ maxNum)+"px)"
+				}
+				bar.onmousemove=function (e) {
+					var e=e||window.event
+					sliderLeft=e.clientX-bar.offsetWidth
+					console.log(roller.offsetLeft, maxNum)
+					moveFn()
+				}
+				roller.onmouseup=function () {
+					bar.onmousemove=null
+					wrap.style.animationName="cube"		
+			}
+			}
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
