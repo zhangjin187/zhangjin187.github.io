@@ -1,0 +1,156 @@
+			* { margin: 0; padding: 0; list-style: none; }
+
+			.clearfix:after { content: ""; clear: both; display: block; }
+
+			a { color: inherit; text-decoration: none; }
+
+			/*reset*/
+			
+			#head {
+				background-color: #333;
+				height: 80px;
+				width: 100%;
+				box-shadow: 0 2px 2px #333;
+				z-index: 9;
+				position: relative;
+			}
+			
+			#head img {
+				vertical-align: middle;
+				margin-top: 25px;
+			}
+			
+			.nav li {
+				float: left;
+				color: #ccc;
+				margin: 30px 10px;
+				padding: 5px;
+				font-size: 13px;
+				border: 1px solid transparent;
+				vertical-align: middle;
+			}
+			
+			.nav {
+				float: right;
+				Height: 80px;
+			}
+			
+			.nav li:hover {
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				color: #fff;
+			}
+			
+			.nav li.current {
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				color: #fff;
+			}
+			
+			.wrap {
+				width: 90%;
+				margin: 0 auto;
+			}
+			
+			.navbtn img {
+				width: 30px;
+				height: 30px;
+			}
+			
+			.navbtn {
+				float: right;
+			}
+			
+			.nav-menu {
+				position: absolute;
+				top: 100%;
+				color: #CCCCCC;
+				background-color: #333;
+				width: 100%;
+				text-align: center;
+				display: none;
+			}
+			
+			.nav-menu li {
+				width: 80%;
+				padding: 10px;
+				border-bottom: 1px solid #fff;
+				font-size: 15px;
+				margin: 0 auto;
+			}
+			
+			.nav-menu li:hover {
+				color: #fff;
+				background-color: #222;
+				transition: 0.5s;
+			}
+			/*导航栏结束*/
+			
+			.footer {
+				width: 300px;
+				margin: 80px auto;
+				margin-bottom:20px;
+				text-align: center;
+			}
+			
+			.footer p>a>img {
+				position: absolute;
+				width: 100%;
+				left: 0;
+			}
+			
+			.footer p {
+				position: relative;
+				width: 25px;
+				height: 25px;
+				margin: 0 5px;
+			}
+			
+			.footer .contact>p {
+				display: inline-block;
+			}
+			
+			.footer span {
+				font-size: 13px;
+				color: #999;
+			}
+			
+			.contact {
+				margin-bottom: 10px;
+			}
+			
+			.contact p:hover>a>img:nth-child(2) {
+				opacity: 0;
+				transition: 0.2s;
+			}
+			/*footer结束*/
+			
+			@media screen and (min-width:960px) {
+				.navbtn {
+					display: none;
+				}
+			}
+			
+			@media screen and (min-width:760px) and (max-width:960px) {
+				.navbtn {
+					display: block;
+				}
+				.nav {
+					display: none;
+				}
+			}
+			
+			@media screen and (max-width:760px) {
+				.navbtn {
+					display: block;
+				}
+				.nav {
+					display: none;
+				}
+				#head {
+					height: 60px;
+				}
+				#head img {
+					margin-top: 15px;
+				}
+			}

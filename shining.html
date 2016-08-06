@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<style type="text/css">
+			#content {
+				width: 960px;
+				margin: auto;
+				margin-top: 3px;
+			}
+			
+			#content li {
+				border-bottom: 1px solid #ccc;
+				position: relative;
+			}
+			
+			#content>li div {
+				box-sizing: border-box;
+				padding: 10px 20px;
+			}
+			
+			#content>li div>p {
+				line-height: 30px;
+			}
+			
+			#content>li div>h1 {
+				padding: 15px 0;
+			}
+			
+			#content>li:hover .active {
+				opacity: 0;
+				transition: 0.5s;
+			}
+			/*内容结束*/
+			
+			
+			@media screen and (min-width:760px) {
+				#content {
+					width: 960px;
+					margin: auto;
+					margin-top: 3px;
+				}
+				#content li {
+					height: 180px;
+				}
+				#content>li img {
+					position: absolute;
+					left: 0;
+					width: 600px;
+					height: 180px;
+				}
+				#content>li div {
+					width: 360px;
+					height: 180px;
+				}
+				#content>li div:nth-child(3),
+				#content>li div:nth-child(1) {
+					float: right;
+					border-left: 20px solid #CCCCCC;
+				}
+				#content>li.second div {
+					border-right: 20px solid #CCCCCC;
+					float: left;
+					text-align: right;
+					border-left: none;
+				}
+				#content>li:hover div {
+					border-color: #CFDB00;
+					transition: .5s;
+				}
+				#content>li.second img {
+					left: 360px;
+				}
+			}
+			
+			@media screen and (max-width:760px) {
+				#content {
+					width: 95%;
+					margin: auto;
+					margin-top: 3px;
+					text-align: center;
+				}
+				#content>li img:nth-child(2) {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				#content>li img {
+					width: 100%;
+				}
+				#content>li div {
+					width: 100%;
+				}
+				#content h1 {
+					font-size: 25px;
+					animation: text 1s;
+				}
+				#content p {
+					font-size: 13px;
+					animation:text 1s;
+				}
+				@keyframes text{
+					from{transform:translateX(-500px)}
+					to{transform:translateX(0px)}
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<div class="wrap">
+				<img src="img/home/shininglogo.png" alt="" />
+				<ul class="nav clearfix">
+					<li class="current">
+						<a href="shining.html">
+							<h3>Home</h3>
+						</a>
+					</li>
+					<li>
+						<a href="about.html">
+							<h3>About</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rendering.html">
+							<h3>Rendering</h3>
+						</a>
+					</li>
+					<li>
+						<a href="3d.html">
+							<h3>3D Animation</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bim.html">
+							<h3>Bim</h3>
+						</a>
+					</li>
+					<li>
+						<a href="contact.html">
+							<h3>Contact</h3>
+						</a>
+					</li>
+				</ul>
+				<div class="navbtn">
+					<img src="img/home/menu.png" alt="" />
+				</div>
+			</div>
+			<ul class="nav-menu">
+				<li>
+					<a href="shining.html">
+						<h3>Home</h3>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<h3>About</h3>
+					</a>
+				</li>
+				<li>
+					<a href="rendering.html">
+						<h3>Rendering</h3>
+					</a>
+				</li>
+				<li>
+					<a href="3d.html">
+						<h3>3D Animation</h3>
+					</a>
+				</li>
+				<li>
+					<a href="bim.html">
+						<h3>Bim</h3>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<h3>Contact</h3>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--head结束-->
+		<ul id="content">
+			<li>
+				<a href="rendering.html">
+					<img src="img/home/home_pic_one_h.png" alt="" />
+					<img src="img/home/home_pic_one.png" alt="" class="active" />
+					<div>
+						<h1>RENDERINGS</h1>
+						<p>Masterplan、Public Building、commercial Building、Residential Building、Landscape Design</p>
+					</div>
+				</a>
+			</li>
+			<li class="second">
+				<a href="bim.html">
+					<img src="img/home/home_pic_two_h.png" alt="" />
+					<img src="img/home/home_pic_two.jpg" alt="" class="active" />
+					<div>
+						<h1>BIM</h1>
+						<p>Model Completion、Clash Detection、MEP Integration、Curtain Wall Remedying、BIM Consulting</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="3d.html">
+					<img src="img/home/homes_pic_three_h.jpg" alt="" />
+					<img src="img/home/homes_pic_three.jpg" alt="" class="active">
+					<div>
+						<h1>3D ANIMATION</h1>
+						<p>Real estate advertising animation Design scheme Animation Corporate promotional Animation</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!--content结束-->
+		<div class="footer">
+			<div class="contact">
+				<p>
+					<a href="###">
+						<img src="img/home/mail_h.jpg" alt="" />
+						<img src="img/home/mail.jpg" alt="" />
+					</a>
+				</p>
+			</div>
+			<div class="contact">
+				<p>
+					<a href=""><img src="img/home/facebook_h.jpg" alt="" /><img src="img/home/facebook.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/youtube_h.jpg" alt="" /><img src="img/home/youtube.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/linkedln_h.jpg" alt="" /><img src="img/home/linkedln.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/twitter_h.jpg" alt="" /><img src="img/home/twitter.jpg" alt="" /></a>
+				</p>
+			</div>
+			<span>Copyright © 1998-2015 shining Group</span>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".navbtn").click(function() {
+			$(".nav-menu").slideToggle("fast")
+		})
+	</script>
+
+</html>

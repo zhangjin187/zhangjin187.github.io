@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<style type="text/css">
+			.banner{
+				background-image: url(img/about/world_map.png);
+				background-color: #ddd;
+				padding:100px 0 30px 10px;
+				background-position:center center;
+				background-repeat: no-repeat;
+			}
+			.banner p{
+				width:500px;
+				margin:25px 0;
+				line-height: 35px;
+				font-size:0.9em;
+				word-break: break-all;
+			}
+			.pic img{
+				margin:5px 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<div class="wrap">
+				<img src="img/home/shininglogo.png" alt="" />
+				<ul class="nav clearfix">
+					<li>
+						<a href="shining.html">
+							<h3>Home</h3>
+						</a>
+					</li>
+					<li class="current">
+						<a href="about.html">
+							<h3>About</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rendering.html">
+							<h3>Rendering</h3>
+						</a>
+					</li>
+					<li>
+						<a href="3d.html">
+							<h3>3D Animation</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bim.html">
+							<h3>Bim</h3>
+						</a>
+					</li>
+					<li>
+						<a href="contact.html">
+							<h3>Contact</h3>
+						</a>
+					</li>
+				</ul>
+				<div class="navbtn">
+					<img src="img/home/menu.png" alt="" />
+				</div>
+			</div>
+			<ul class="nav-menu">
+				<li>
+					<a href="shining.html">
+						<h3>Home</h3>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<h3>About</h3>
+					</a>
+				</li>
+				<li>
+					<a href="rendering.html">
+						<h3>Rendering</h3>
+					</a>
+				</li>
+				<li>
+					<a href="3d.html">
+						<h3>3D Animation</h3>
+					</a>
+				</li>
+				<li>
+					<a href="bim.html">
+						<h3>Bim</h3>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<h3>Contact</h3>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--head结束-->
+		<div class="banner">
+			<h1>About Us</h1>
+			<p>
+				Shanghai Shining is a creative corporation which focuses on helping architects and owners turn their construction which is still in design stage into visual images or videos, perfectly showing the essence of construction.
+			</p>
+			<p>
+				Since the year of 1998, we have finished more than 20000 3D visualization creativities of all Kinds of architecture for nearly 2000 architect firms both at home and abroad. We have used 3D technology, shooting, drawing and architectonic to provide the clients with the services of CG images, CG animations, BIM and 3D products finally
+			</p>
+			<div class="pic">
+				<img src="img/about/aedas.png" alt="" />
+				<img src="img/about/gensler.png" alt="" />
+				<img src="img/about/bdp.png" alt="" />
+				<img src="img/about/ch2mhill.png" alt="" />
+				<img src="img/about/benoy.png" alt="" />
+				<img src="img/about/sasaki.png" alt="" />
+				<img src="img/about/edsa.png" alt="" />
+				<img src="img/about/kpf.png" alt="" />
+			</div>
+		</div>
+		<div class="footer">
+			<div class="contact">
+				<p>
+					<a href="###">
+						<img src="img/home/mail_h.jpg" alt="" />
+						<img src="img/home/mail.jpg" alt="" />
+					</a>
+				</p>
+			</div>
+			<div class="contact">
+				<p>
+					<a href=""><img src="img/home/facebook_h.jpg" alt="" /><img src="img/home/facebook.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/youtube_h.jpg" alt="" /><img src="img/home/youtube.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/linkedln_h.jpg" alt="" /><img src="img/home/linkedln.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/twitter_h.jpg" alt="" /><img src="img/home/twitter.jpg" alt="" /></a>
+				</p>
+			</div>
+			<span>Copyright © 1998-2015 shining Group</span>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".navbtn").click(function() {
+			$(".nav-menu").slideToggle("fast")
+		})
+	</script>
+
+</html>

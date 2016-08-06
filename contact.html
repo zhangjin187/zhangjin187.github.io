@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+		<style type="text/css">
+			.container{
+				width: 100%;
+				padding-top:80px;
+				background: #eee center center url(img/about/world_map.png) no-repeat;
+			}
+			.container>img{
+				width: 100%;
+			}
+			.name{
+				margin: 20px auto;
+				overflow: hidden;
+				text-align: center;
+				width: 300px;
+			}
+			.name h2,.name p{
+				display: inline-block;
+				line-height: 25px;
+			}
+			.name img{
+				float: left;
+			}
+			.tel{
+				width: 900px;
+				margin:100px auto;
+			}
+			.tel li{
+				font-size:15px;
+				float: left;
+				width: 300px;
+			}
+			.tel li img{
+				float: left;
+				padding-right:15px;
+			}
+			.footer{
+				padding-bottom: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<div class="wrap">
+				<img src="img/home/shininglogo.png" alt="" />
+				<ul class="nav clearfix">
+					<li>
+						<a href="shining.html">
+							<h3>Home</h3>
+						</a>
+					</li>
+					<li>
+						<a href="about.html">
+							<h3>About</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rendering.html">
+							<h3>Rendering</h3>
+						</a>
+					</li>
+					<li>
+						<a href="3d.html">
+							<h3>3D Animation</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bim.html">
+							<h3>Bim</h3>
+						</a>
+					</li>
+					<li class="current">
+						<a href="contact.html">
+							<h3>Contact</h3>
+						</a>
+					</li>
+				</ul>
+				<div class="navbtn">
+					<img src="img/home/menu.png" alt="" />
+				</div>
+			</div>
+			<ul class="nav-menu">
+				<li>
+					<a href="shining.html">
+						<h3>Home</h3>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<h3>About</h3>
+					</a>
+				</li>
+				<li>
+					<a href="rendering.html">
+						<h3>Rendering</h3>
+					</a>
+				</li>
+				<li>
+					<a href="3d.html">
+						<h3>3D Animation</h3>
+					</a>
+				</li>
+				<li>
+					<a href="bim.html">
+						<h3>Bim</h3>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<h3>Contact</h3>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--head结束-->
+		<div class="container">
+			<div class="name">
+				<h2>Contacts:</h2>
+				<p>Tence Zhang</p>
+			</div>
+			<div class="name">
+				<img src="img/home/mail.jpg" alt="" />
+				<h2>Email:</h2>
+				<p>Zhangjin187@live.com</p>
+			</div>
+			<ul class="tel clearfix">
+				<li>
+					<img src="img/contact/contact_phone.png" alt="" />
+					<p>+86 21 6598 6866-304</p>
+					<p>+86 21 6598 3188-304</p>
+				</li>
+				<li>
+					<img src="img/contact/iphone.png" alt="" />
+					<p style="padding-top:10px;">+86 138 1690 3400</p>
+				</li>
+				<li>
+					<img src="img/contact/contact_add.png" alt="" />
+					<p>1-5F.creative center building,No.2,1147 Lane,
+Siping Road,Yangpu District,Shanghai</p>
+				</li>
+			</ul>
+			<img src="img/contact/contact_place.png"/>
+			
+	
+		<div class="footer">
+			<div class="contact">
+				<p>
+					<a href="###">
+						<img src="img/home/mail_h.jpg" alt="" />
+						<img src="img/home/mail.jpg" alt="" />
+					</a>
+				</p>
+			</div>
+			<div class="contact">
+				<p>
+					<a href=""><img src="img/home/facebook_h.jpg" alt="" /><img src="img/home/facebook.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/youtube_h.jpg" alt="" /><img src="img/home/youtube.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/linkedln_h.jpg" alt="" /><img src="img/home/linkedln.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/twitter_h.jpg" alt="" /><img src="img/home/twitter.jpg" alt="" /></a>
+				</p>
+			</div>
+			<span>Copyright © 1998-2015 shining Group</span>
+		</div>
+			
+		</div>
+		<script type="text/javascript">
+			$(".navbtn").click(function() {
+				$(".nav-menu").slideToggle("fast")
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+		<style type="text/css">
+			#head{
+				position: fixed;
+				top:0;
+			}
+			section{
+				position: relative;
+				height:600px;	
+			}
+			.container>img{
+				position: absolute;
+				height:400px;
+				z-index: 1;
+			}
+			.posr{
+				right:80px;
+			}
+			.posl{
+				left:72px;
+			}
+			.post{
+				top:0;
+			}
+			.posb{
+				bottom:0;
+			}
+			.posrt{
+				right:0;
+			}
+			.poslt{
+				left:37px;
+			}
+			.section4 .posrt{
+				right:40px;
+			}
+			.num{
+				border:1px solid #777;
+				border-radius: 5px;
+				width:25px;
+				height:25px;
+				line-height: 27px;
+				text-align: center;
+				font-size: 25px;
+				margin-right:10px;
+				float: left;
+				color:#777;
+			}
+			.intr h2{
+				font-size: 20px;
+				color:#777;
+				line-height: 30px;
+			}
+			.intr{
+				padding:80px;
+			}
+			.imgs{
+				width: 60%;
+			}
+			.text{
+				font-size: 15px;
+				padding:20px 0;
+				width:300px;
+			}
+			.section1 .imgs>img{
+				width: 25%;
+				margin-left:-20px;
+			}
+			.section1 .imgs{
+				margin-left:20px;
+			}
+			.section2 .imgs>img{
+				width:40%;
+			}
+			.section3 .intr{
+				margin-left: 200px;
+				
+			}
+			.section3 .intr .text{
+				width: 350px;
+			}
+			.section3 .imgs>img{
+				width: 45%;
+			}
+			.container{
+				width: 960px;
+				position: relative;
+				height:100%;
+				margin:0 auto;
+			}
+			.section4 .imgs img{
+				width: 50%;
+			}
+			@media screen and (min-width:500px) and (max-width:960px ) {
+				.container{
+					width:100%;
+				}
+				.imgs{
+					width: 80%;
+				}
+				.num{
+					border:1px solid #777;
+					border-radius: 5px;
+					width:20px;
+					height:20px;
+					line-height: 22px;
+					text-align: center;
+					font-size: 20px;
+					margin-right:10px;
+					float: left;
+					color:#777;
+				}
+				.intr h2{
+					font-size: 15px;
+					color:#777;
+					line-height: 25px;
+				}
+				.intr{
+					padding:100px 50px;
+				}
+				.text{
+					font-size: 13px;
+					padding:20px 0;
+					width:300px;
+				}
+				.posl{
+				    left:0;
+				}
+				.poslt{
+					left:-37px;
+				}
+				.section3 .intr{
+					margin-left:120px;
+				}
+			}
+			@media screen and (max-width:500px ) {
+				.container{
+					width:100%;
+				}
+				.imgs{
+					width: 130%;
+				}
+				.container>img{
+					display: none;
+				}
+				.num{
+					border:1px solid #777;
+					border-radius: 5px;
+					width:20px;
+					height:20px;
+					line-height: 22px;
+					text-align: center;
+					font-size: 20px;
+					margin-right:10px;
+					float: left;
+					color:#777;
+				}
+				.intr h2{
+					font-size: 15px;
+					color:#777;
+					line-height: 25px;
+				}
+				.container .intr{
+					margin:0 auto;
+				}
+				.text{
+					font-size: 13px;
+					padding:20px 0;
+					width:300px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<div class="wrap">
+				<img src="img/home/shininglogo.png" alt="" />
+				<ul class="nav clearfix">
+					<li>
+						<a href="shining.html">
+							<h3>Home</h3>
+						</a>
+					</li>
+					<li>
+						<a href="about.html">
+							<h3>About</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rendering.html">
+							<h3>Rendering</h3>
+						</a>
+					</li>
+					<li>
+						<a href="3d.html">
+							<h3>3D Animation</h3>
+						</a>
+					</li>
+					<li class="current">
+						<a href="bim.html">
+							<h3>Bim</h3>
+						</a>
+					</li>
+					<li>
+						<a href="contact.html">
+							<h3>Contact</h3>
+						</a>
+					</li>
+				</ul>
+				<div class="navbtn">
+					<img src="img/home/menu.png" alt="" />
+				</div>
+			</div>
+			<ul class="nav-menu">
+				<li>
+					<a href="shining.html">
+						<h3>Home</h3>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<h3>About</h3>
+					</a>
+				</li>
+				<li>
+					<a href="rendering.html">
+						<h3>Rendering</h3>
+					</a>
+				</li>
+				<li>
+					<a href="3d.html">
+						<h3>3D Animation</h3>
+					</a>
+				</li>
+				<li>
+					<a href="bim.html">
+						<h3>Bim</h3>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<h3>Contact</h3>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<section class="section1">
+			<div class="container">
+				<img src="img/bim/building1-half-t.png" alt="" class="posb posrt" style="right:43px"/>
+			<div class="intr">
+				<p class="num">1</p>
+				<h2>MODEL COMPLETION</h2>
+				<p class="text">Establishing and creating the visible and multi-dimension Architecture, Structural and MEP</p>
+				<div class="imgs">
+					<img src="img/bim/BIM-p1-1.png" alt="" />
+					<img src="img/bim/BIM-p1-2.png" alt="" />
+					<img src="img/bim/BIM-p1-3.png" alt="" />						
+				</div>
+			</div>
+			</div>
+			
+		</section>
+		<section class="section2">
+			<div class="container">
+				<img src="img/bim/building1-half-b.png" alt="" class="posr post" style="z-index: -1;"/>
+			<div class="intr">
+				<p class="num">2</p>
+				<h2>CLASH DETECTION</h2>
+				<p class="text">Completing the clash detection among various design parties,engineers and even different organisations in con struction drawings.</p>
+				<div class="imgs">
+					<img src="img/bim/BIM-p2-1.jpg" alt="" />
+					<img src="img/bim/BIM-p2-2.jpg" alt="" />
+				</div>
+			</div>
+			</div>
+			
+		</section>
+		<section class="section3">
+			<div class="container">
+				<img src="img/bim/building2-half-t.png" alt="" class="posb poslt" style="height:435px;"/>
+			<div class="intr">
+				<p class="num">3</p>
+				<h2>MEP INTEGRATION</h2>
+				<p class="text">Profoundly completing the pipeline integration, design coordination and intra-organisational cooperation between Plumbing, HVAC and Electrical engineering.
+</p>
+				<div class="imgs">
+					<img src="img/bim/BIM-p3-1.jpg" alt="" />
+					<img src="img/bim/BIM-p3-2.jpg" alt="" />
+				</div>
+			</div>
+			</div>
+			
+		</section>
+		<section class="section4">
+			<div class="container">
+				<img src="img/bim/building2-half-b.png" alt="" class="posl post" style="z-index: -1;"/>
+			<img src="img/bim/building3-half-t.png" class="posrt posb" style="height:435px;"/>
+			<div class="intr">
+				<p class="num">4</p>
+				<h2>CURTAIN WALL REMEDYING</h2>
+				<p class="text">Creating the abnormity wall based on parametric design tools, and completing detailed curtain wall nodes visibly.
+</p>
+				<div class="imgs">
+					<img src="img/bim/BIM-p4-1.jpg" alt="" />
+					<img src="img/bim/BIM-p4-2.jpg" alt="" />
+				</div>
+			</div>
+			</div>
+			
+		</section>
+		<section>
+			<div class="container">
+				<img src="img/bim/building3-half-b.png" alt="" class="posr post" style="width:313px;"/>
+			<div class="intr">
+				<p class="num">5</p>
+				<h2>BIM CONSULTING</h2>
+				<p class="text">To help you to precisely know what is BIM? How BIM use? When and who is suitably to implement BIM?</p>
+			</div>
+			</div>
+			
+		</section>
+			
+		<!--head结束-->
+		<div class="footer">
+			<div class="contact">
+				<p>
+					<a href="###">
+						<img src="img/home/mail_h.jpg" alt="" />
+						<img src="img/home/mail.jpg" alt="" />
+					</a>
+				</p>
+			</div>
+			<div class="contact">
+				<p>
+					<a href=""><img src="img/home/facebook_h.jpg" alt="" /><img src="img/home/facebook.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/youtube_h.jpg" alt="" /><img src="img/home/youtube.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/linkedln_h.jpg" alt="" /><img src="img/home/linkedln.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/twitter_h.jpg" alt="" /><img src="img/home/twitter.jpg" alt="" /></a>
+				</p>
+			</div>
+			<span>Copyright © 1998-2015 shining Group</span>
+		</div>
+		<script type="text/javascript">
+			$(".navbtn").click(function() {
+				$(".nav-menu").slideToggle("fast")
+			})
+			$("section:even").css("background","#ddd")
+			// jquery 兼容的滚轮事件
+			$(document).on("mousewheel DOMMouseScroll", function (e) {
+			    e.preventDefault()
+			    var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) ||  // chrome & ie
+			                (e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1));              // firefox
+				var st= $("body").scrollTop()
+			    var navH=$("#head").height()
+			    if (delta > 0) {
+			        // 向上滚
+			        if(st>1800){
+			        	 	$("body").stop().animate({scrollTop:1800-navH},"fast")
+			        }else{	        				      
+			        	$("body").stop().animate({scrollTop:st-600},"fast")
+			        }
+			    } else if (delta < 0) {
+			        // 向下滚
+			        if(st==0){
+			        	 	$("body").stop().animate({scrollTop:st+600-navH},"fast")
+			        }else{	        				      
+			        	$("body").stop().animate({scrollTop:st+600},"fast")
+			        }
+			    }
+			});
+			
+		</script>
+	</body>
+
+</html>

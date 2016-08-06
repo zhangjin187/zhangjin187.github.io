@@ -1,0 +1,313 @@
+ <!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" /> <meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+		<style type="text/css">
+			body,
+			html {
+				height: 100%;
+			}
+
+			.slide {
+				overflow: hidden;
+				width: 100%;
+				position: relative;
+			}
+
+			.slide img {
+				width: 100%;
+				display: none;
+			}
+
+			.btns {
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.btns li {
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+				background-color: #ccc;
+				float: left;
+				margin: 0 10px;
+				cursor: pointer;
+			}
+
+			.waterfall {
+				width: 100%;
+				margin-top: 20px;
+			}
+
+			.photos {
+				float: left;
+				width: 50%;
+			}
+
+			.photos ul {
+				box-sizing: border-box;
+				width: 50%;
+				float: left;
+			}
+
+			.photos ul li {
+				box-sizing: border-box;
+				margin: 1%;
+				width: 98%;
+				position: relative;
+			}
+
+			.photos ul li img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.hide {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.6);
+				z-index: 5;
+			}
+
+			.hide .iconfont {
+				text-align: center;
+				color: rgba(255, 255, 255, .8);
+				position: absolute;
+				top: 50%;
+				font-size: 30px;
+				left: 50%;
+				margin: -15px;
+			}
+
+			.mask {
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, .5);
+				position: fixed;
+				z-index: 99;
+				display: none;
+				top: 0;
+				left: 0;
+			}
+
+			.mask img {
+				border: 5px solid #fff;
+				height: 50%;
+				margin-top: 150px;
+			}
+
+			@media screen and (max-width:600px) {
+				.photos ul {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<div class="wrap">
+				<img src="img/home/shininglogo.png" alt="" />
+				<ul class="nav clearfix">
+					<li>
+						<a href="shining.html">
+							<h3>Home</h3>
+						</a>
+					</li>
+					<li>
+						<a href="about.html">
+							<h3>About</h3>
+						</a>
+					</li>
+					<li class="current">
+						<a href="rendering.html">
+							<h3>Rendering</h3>
+						</a>
+					</li>
+					<li>
+						<a href="3d.html">
+							<h3>3D Animation</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bim.html">
+							<h3>Bim</h3>
+						</a>
+					</li>
+					<li>
+						<a href="contact.html">
+							<h3>Contact</h3>
+						</a>
+					</li>
+				</ul>
+				<div class="navbtn">
+					<img src="img/home/menu.png" alt="" />
+				</div>
+			</div>
+			<ul class="nav-menu">
+				<li>
+					<a href="shining.html">
+						<h3>Home</h3>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<h3>About</h3>
+					</a>
+				</li>
+				<li>
+					<a href="rendering.html">
+						<h3>Rendering</h3>
+					</a>
+				</li>
+				<li>
+					<a href="3d.html">
+						<h3>3D Animation</h3>
+					</a>
+				</li>
+				<li>
+					<a href="bim.html">
+						<h3>Bim</h3>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<h3>Contact</h3>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--head结束-->
+		<div class="slide">
+			<img src="img/rendering/Banner (1).jpg" alt="" style="display: block;" />
+			<img src="img/rendering/Banner (2).jpg" alt="" />
+			<img src="img/rendering/Banner (3).jpg" alt="" />
+			<ul class="btns clearfix">
+				<li style="background: greenyellow;"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="mask"></div>
+		<div class="waterfall clearfix">
+			<div class="photos clearfix">
+				<ul></ul>
+				<ul></ul>
+			</div>
+			<div class="photos clearfix">
+				<ul></ul>
+				<ul></ul>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="contact">
+				<p>
+					<a href="###">
+						<img src="img/home/mail_h.jpg" alt="" />
+						<img src="img/home/mail.jpg" alt="" />
+					</a>
+				</p>
+			</div>
+			<div class="contact">
+				<p>
+					<a href=""><img src="img/home/facebook_h.jpg" alt="" /><img src="img/home/facebook.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/youtube_h.jpg" alt="" /><img src="img/home/youtube.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/linkedln_h.jpg" alt="" /><img src="img/home/linkedln.jpg" alt="" /></a>
+				</p>
+				<p>
+					<a href=""><img src="img/home/twitter_h.jpg" alt="" /><img src="img/home/twitter.jpg" alt="" /></a>
+				</p>
+			</div>
+			<span>Copyright © 1998-2015 shining Group</span>
+		</div>
+		<!--footer 结束-->
+		<script type="text/javascript">
+			var timer;
+			var i = 0;
+			$(".navbtn").click(function() {
+				$(".nav-menu").slideToggle("fast")
+			})
+
+			function autoplay() {
+				timer = setInterval(function() {
+					i++
+					if(i > 2) {
+						i = 0
+					}
+					showbtn()
+					$(".slide img").fadeOut(300).hide()
+					$(".slide img").eq(i).fadeIn(300).show()
+				}, 3000)
+			}
+			autoplay()
+
+			function stop() {
+				clearInterval(timer)
+			}
+
+			function showbtn() {
+				$(".btns li").css("background", "#ccc")
+				$(".btns li").eq(i).css("background", "greenyellow")
+			}
+			$(".btns li").click(function() {
+				stop()
+				$(".btns li").css("background", "#ccc")
+				$(this).css("background", "greenyellow")
+				$(".slide img").fadeOut(500).hide()
+				$(".slide img").eq($(this).index()).fadeIn(500).show()
+				autoplay()
+			})
+			for(var k = 0; k < 99; k++) {
+				var newLi = document.createElement("li");
+				newLi.innerHTML = "<img src='img/rendering/img" + (k + 1) + ".jpg'>"
+				var uls = document.querySelectorAll(".waterfall ul")
+				newLi.idx = k
+				var ulH = []
+				for(var n = 0; n < uls.length; n++) {
+					ulH.push(uls[n].offsetHeight)
+				}
+				var minHeight = ulH[0]
+				var minIndex = 0
+				for(var m = 0; m < ulH.length; m++) {
+					if(minHeight > ulH[m]) {
+						minHeight = ulH[m]
+						minIndex = m
+					}
+				}
+				uls[minIndex].appendChild(newLi)
+			}
+
+			function randFn(min, max) {
+				return parseInt(Math.random() * (max - min + 1) + min)
+			}
+			var _hide = $("<div class='hide'><p class='iconfont'>&#xe616;<p><div>")
+			$(".waterfall li").prepend(_hide)
+			$(".hide").fadeOut()
+			$(".waterfall li").hover(function() {
+				$(this).children(".hide").stop().fadeToggle(600)
+			})
+			$(".waterfall li").click(function() {
+				$(".mask").show()
+				var intr = $("<img src='img/rendering/img" + (this.idx + 1) + ".jpg'>")
+				$(".mask").append(intr)
+				$(".mask").click(function() {
+					$(this).hide().empty()
+				})
+			})
+		</script>
+	</body>
+
+</html>
