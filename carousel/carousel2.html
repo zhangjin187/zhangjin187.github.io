@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jQuery.js"></script>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				
+			}
+			.wrap li{
+				position: absolute;
+				width: 600px;
+				height: 400px;
+				list-style: none;
+				left:0;
+				top:0;
+				opacity: 0;
+			}
+			.wrap{
+				width:3600px;
+				position: relative;	
+			}
+			.viewbox{
+				position: relative;
+				width: 600px;
+				height: 400px;
+				/*overflow: hidden;*/
+			}
+			.arrow{
+				position: absolute;
+				top:50%;
+				margin-top:-15px;
+				width:25px;
+				height:30px;
+				background-color: rgba(0,0,0,0.6);
+				text-align: center;
+				line-height: 30px;
+				color:#fff;
+				-webkit-user-select: none;
+				cursor:pointer;
+				z-index: 10;
+			}
+			.prev{
+				left:0;
+			}
+			.next{
+				right:0;
+			}
+			.clearfix:after{
+				clear: both;
+				display: block;
+				content:'';
+			}
+			.wrap li a{
+				float: left;
+				width:120px;
+				height:400px;
+				transition:all 0.5s;
+			}
+			.wrap li a:nth-child(1){
+				background-position: 0px;
+			}
+			.wrap li a:nth-child(2){
+				background-position: -120px;
+			}
+			.wrap li a:nth-child(3){
+				background-position: -240px;
+			}
+			.wrap li a:nth-child(4){
+				background-position: -360px;
+			}
+			.wrap li a:nth-child(5){
+				background-position: -480px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="viewbox">
+			<div class="wrap clearfix">
+				<li style="opacity: 1;">
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+				</li>
+				<li>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+				</li>
+				<li>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+				</li>
+				<li>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+				</li>
+				<li>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+					<a href="###"></a>
+				</li>
+			</div>
+			<p class="prev arrow"><</p>
+			<p class="next arrow">></p>
+		</div>
+		<script type="text/javascript">
+			var num=0;
+			var timer
+			for (var i = 0; i < 5; i++) {
+			    $(".wrap li").eq(i).find("a").css({
+			    		"background-image":"url(img/银魂"+(i+1)+".jpg)",
+			    		"background-size":"cover"
+			    })
+			}
+			
+			$(".next").click(function () {
+				stop()
+				num++
+				if(num>=5){
+					num=0
+				}
+				$(".wrap li").css("opacity",0)
+//				$(".wrap li a:even").css({
+//					"transform":"translateY(100px)"
+//				})
+//			$(".wrap li a:odd").css("transform","translateY(-100px)")
+			$(".wrap li a").css("transform","rotateY(180deg) translateY(0px)")
+					$(".wrap li").eq(num).animate({opacity:1},100).find("a").css({
+						"transform":"translateY(0px) rotateY(0deg)"
+					})
+				autoplay()
+			})
+
+			$(".prev").click(function(){
+				stop()
+				num--
+				if(num<0){
+					num=4
+				}
+				$(".wrap li").css("opacity",0)
+				$(".wrap li a:even").css({
+					"transform":"translateY(100px)"
+				})
+			$(".wrap li a:odd").css("transform","rotateY(0deg) translateY(-100px)")
+					$(".wrap li").eq(num).animate({opacity:1},100).find("a").css({
+						"transform":"translateY(0px)"
+					})
+				autoplay()
+			})
+			function autoplay(){
+				timer=setInterval(function () {
+					$(".next").click()
+				},3000) 
+			}
+			autoplay()
+			function stop () {
+				clearInterval(timer)
+			}
+
+		</script>
+	</body>
+</html>
