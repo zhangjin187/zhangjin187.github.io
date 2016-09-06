@@ -8,7 +8,7 @@
 			*{
 				margin:0;
 				padding:0;
-				
+
 			}
 			.wrap li{
 				position: absolute;
@@ -21,7 +21,7 @@
 			}
 			.wrap{
 				width:3600px;
-				position: relative;	
+				position: relative;
 /*				transition:all 0.3s;*/
 			}
 			.viewbox{
@@ -139,7 +139,7 @@
 						"opacity":1
 					},200)
 				}
-				
+
 			})
 
 			$(".prev").click(function(){
@@ -155,10 +155,16 @@
 					},200)
 				}
 			})
-			setInterval(function () {
+		 timer=setInterval(function () {
 				$(".next").click()
-			},3000) 
-
+			},3000)
+			$("viewbox").hover(function(){
+				clearInterval(timer);
+			},function(){
+				timer=setInterval(function () {
+					 $(".next").click()
+				 },3000) 
+			})
 		</script>
 	</body>
 </html>
