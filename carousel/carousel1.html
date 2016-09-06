@@ -158,9 +158,10 @@
 		 timer=setInterval(function () {
 				$(".next").click()
 			},3000)
-			$("viewbox").hover(function(){
+			$("viewbox").mouseenter(function(){
 				clearInterval(timer);
-			},function(){
+			})
+$("viewbox").mouseout(function(){
 				timer=setInterval(function () {
 					 $(".next").click()
 				 },3000) 
