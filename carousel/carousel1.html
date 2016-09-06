@@ -121,6 +121,7 @@
 		</div>
 		<script type="text/javascript">
 			var num=0;
+			var timer;
 			for (var i = 0; i < 5; i++) {
 			    $(".wrap li").eq(i).find("a").css({
 			    		"background-image":"url(img/银魂"+(i+1)+".jpg)",
@@ -155,16 +156,13 @@
 					},200)
 				}
 			})
-		 timer=setInterval(function () {
-				$(".next").click()
-			},3000)
 			$("viewbox").mouseenter(function(){
 				clearInterval(timer);
 			})
-$("viewbox").mouseout(function(){
+			$("viewbox").mouseout(function(){
 				timer=setInterval(function () {
 					 $(".next").click()
-				 },3000) 
+				 },3000)
 			})
 		</script>
 	</body>
