@@ -1,0 +1,45 @@
+
+				<!--查看维修记录-->
+				<section class="wrap check-store l">
+					<h3>查看项目信息</h3>
+					<div class="check-table">
+						<table border="1">
+							<thead>
+								<tr>
+									<th>维修项目</th>
+									<!-- <th>时间</th>
+									<th>成本价(元)</th>
+									<th>售价(元)</th>
+									<th>库存量</th> -->
+									<th>备注</th>
+									<th>操作</th>
+									<!-- <th></th> -->
+								</tr>
+							</thead>
+							<tbody ng-controller="checkstore as stores">
+								<tr title="点击查看详情" ng-repeat="store in stores.datas" typeId= {{store.id}} >
+									<td> {{store.name}} </td>
+									<!-- <td>2016/11/15/18:16</td>
+									<td>
+										<ul>
+											<li>修理轮胎</li>
+											<li>修理车灯</li>
+											<li>修理发动机</li>
+											<li>修理轮胎</li>
+										</ul>
+									</td>
+									<td>600</td>
+									<td>5654987841</td> -->
+									<td> {{store.memo || '无'}} </td>
+									<td title="" >
+										<p><button class="change-store-info">更改</button></p>
+										<p><button class="del-store-info" ng-click="stores.delstore($index)">删除</button></p>
+									</td>
+								</tr>
+							</tbody>
+								
+
+						</table>
+						
+					</div>
+				</section>

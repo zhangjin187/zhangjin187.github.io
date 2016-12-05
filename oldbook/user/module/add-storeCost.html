@@ -1,0 +1,57 @@
+	
+				<!--添加维修记录-->
+				<section class="wrap add-store l">
+					<h3>添加库存</h3>
+					<div class="add-table">
+						<table border="1">
+							<thead>
+								<tr>
+									<th>项目名称</th>
+									<!-- <th>时间</th> -->
+									<th>成本价(元)</th>
+									<th>售价(元)</th>
+									<th>库存量</th>
+									<th>备注</th>
+									<th>操作</th>
+									<!-- <th></th> -->
+								</tr>
+							</thead>
+							<tbody ng-controller="addstoreCost as storeCtrl">
+								<!-- <tr>
+									<td><input class="name" ng-model="storeCtrl.name" placeholder="输入名字" type="text"></td>
+									<td class="td-ul">
+										<input class="primaryPrice"  ng-model="storeCtrl.primaryPrice" placeholder="输入钱数" type="text">
+									</td>
+									<td><input class="salePrice" ng-model="storeCtrl.salePrice" placeholder="输入钱数" type="text"></td>
+									<td>
+										<input class="number"  ng-model="storeCtrl.number" placeholder="库存" type="text">
+									
+									</td>
+									<td><input class="memo" ng-model="storeCtrl.memo" type="text"></td>
+									<td>
+										<p><button class="no-add"ng-click="storeCtrl.noAdd()">放弃</button></p>
+										<p><button class="add-info" ng-click="storeCtrl.sureAdd()">保存</button></p>
+									</td>
+								</tr> -->
+								<tr>
+									<td><input class="name" ng-model="storeCtrl.name" placeholder="项目名称" type="text"></td>
+
+									<td class="td-ul">
+										<input class="primaryPrice"  ng-model="storeCtrl.primaryPrice" placeholder="输入钱数" type="text">
+									</td>
+									<td><input class="salePrice" ng-model="storeCtrl.salePrice" placeholder="输入钱数" type="text"></td>
+									<td>
+										<input class="number"  ng-model="storeCtrl.number" placeholder="库存" type="text">
+									
+									</td>
+									<td><input class="memo" placeholder="项目备注" ng-model="storeCtrl.memo" type="text"></td>
+									<td>
+										<p><button class="no-add"ng-click="storeCtrl.noAdd()">放弃</button></p>
+										<p><button class="add-info" ng-click="storeCtrl.sureAdd()">保存</button></p>
+									</td>
+								</tr>
+							</tbody>
+								
+						</table>
+					</div>
+				</section>

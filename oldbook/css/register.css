@@ -1,0 +1,123 @@
+.register-main{
+	/*height: 900px;*/
+}
+
+.register-main table{
+	width: 100%;
+	text-align: center;
+	margin: 30px auto;
+	font-size: 18px;
+	/*display: block;*/
+}
+
+.register-main table input[type=text],.register-main table input[type=password]{
+	width: 300px;
+	height: 40px;
+	font-size:18px;
+	border: 1px solid #888;
+	line-height: 40px;
+	padding: 0 10px;
+}
+
+.register-main table td.inError input{
+	/*border: 1px solid #f00;*/
+	border: 0;
+	outline: #f00 solid 1px;
+}
+
+.register-main table td.inError span{
+	color: #f00;
+}
+
+
+.register-main table input[type=text]:focus,.register-main table input[type=password]:focus{
+	border: 1px solid #888 !important;
+	outline: none;
+}
+
+.register-main table button{
+	border: 0;
+	height: 36px;
+	padding: 0 10px;
+	background: transparent;
+	color: #ca7;
+	font-size: .8em;
+	outline: none;
+	/*color: #ddd;*/
+}
+
+.register-main table button.disable{
+	color: #ddd;
+}
+
+.register-main table caption{
+	height: 80px;
+	font-size: 36px;
+	line-height: 80px;
+}
+
+.register-main table tr{
+	height: 60px;
+	line-height: 40px;
+	font-size: 20px;
+}
+
+.register-main table tr td>span{
+	/*display: inline-block;*/
+	padding: 0 10px;
+	color: #ca7;
+	font-size: .8em;
+}
+
+.register-main table tr td:first-child{
+	text-align: right;
+	width: 40%;
+}
+
+.register-main table tr td:last-child{
+	text-align: left;
+}
+
+.register-main table td[colspan]{
+	text-align: center!important;
+}
+
+.ctrled{
+	overflow: hidden;
+	display: none;
+}
+
+.register-main table tr textarea{
+	width: 400px;
+	height: 200px;
+}
+
+.register-main table tr td p span{
+	text-decoration: underline;
+	font-size: .90em;
+	cursor: pointer;
+}
+
+.register-main table tr td p span:hover{
+	color: #ca7;
+}
+
+.register-main table tr td input[type=button]{
+/*	font-size: 24px;
+	width: 90px;
+	height: 40px;
+	border: 0;
+	background: #ca7;
+	border-radius: 6px;
+	cursor: pointer;*/
+	width: 200px;
+	background-color: #ca7;
+	letter-spacing: 5px;
+	text-align: center;
+	line-height: 40px;
+	color:#fff;
+	font-size:20px;
+	border:none;
+	cursor: pointer;
+	margin:15px 0;
+}

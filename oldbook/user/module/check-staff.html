@@ -1,0 +1,40 @@
+
+				<!--查看维修记录-->
+				<section class="wrap check-repair l">
+					<h3>员工管理</h3>
+					<div class="check-table">
+						<table border="1">
+							<thead>
+								<tr>
+									<th>员工姓名</th>
+									<th>录入时间</th>
+									<!-- <th>主要负责模块</th> -->
+									<!-- <th>费用(元)</th> -->
+									<th>电话</th>
+									<th>操作</th>
+									<!-- <th>查看详情</th> -->
+									<!-- <th></th> -->
+								</tr>
+							</thead>
+							<tbody ng-controller="checkstaff as staffs">
+								<tr ng-controller="staffs as staff" title="点击查看详情" ng-repeat="data in staffs.datas" workerId={{data.id}}>
+									<td> {{data.name}} </td>
+									<td> {{data.createTime}} </td>
+									<!-- <td>
+										{{}}
+									</td> -->
+									<td> {{data.mobile}} </td>
+									<td title="">
+										<p><button class="change-repair-info">更改</button></p>
+										<p><button class="del-repair-info" ng-click="staff.delworker($event)">删除</button></p>
+									</td>
+								</tr>
+								
+							</tbody>
+								
+
+						</table>
+				
+						<pagechange></pagechange>
+					</div>
+				</section>

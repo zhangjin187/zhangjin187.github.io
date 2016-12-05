@@ -1,0 +1,174 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: FZLanTingHei-L-GBK, GothamBook, helvetica, arial, "Microsoft Yahei", "微软雅黑", sans-serif
+}
+
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+	border: 0
+}
+
+a {
+	color: inherit
+}
+
+ul,
+ol,
+li {
+	list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+	font-size: 100%
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: inherit
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	width: 0;
+}
+
+textarea {
+	overflow: auto;
+	resize: none
+}
+
+input{
+	outline:none;
+}
+
+
+
+label,
+summary {
+	cursor: default
+}
+
+a,
+button {
+	cursor: pointer
+}
+
+img {
+	max-width: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+	font-weight: 700
+}
+
+del,
+ins,
+u,
+s,
+a,
+a:hover{
+	text-decoration: none
+}
+
+
+body,
+html {
+	max-width: 100%;
+	height: 100%;
+	position: relative;
+
+	-ms-user-select: none;
+	-o-user-select: none;
+	-webkit-user-select: none;
+	user-select: none
+}
+
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #000;
+
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+   /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 1.5em;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.l,
+.left {
+	float: left
+}
+
+.r,
+.right {
+	float: right
+}
+
+
+
+
+.content {
+	width: 1000px;
+	margin: 0 auto
+
+}

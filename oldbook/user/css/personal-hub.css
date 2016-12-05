@@ -1,0 +1,516 @@
+.menu>ul>li.open {
+	height:94px
+}
+.menu>ul {
+	min-height:10px
+}
+.menu {
+	margin:20px;
+	padding:15px 10px;
+	border:1px solid #ddd;
+	width:200px
+}
+.menu h3 {
+	padding:10px 0
+}
+.menu>ul>li {
+	height:32px;
+	overflow:hidden;
+	transition:height .2s;
+	cursor:pointer
+}
+.menu>ul>li h4 {
+	padding:5px 0;
+	background-color:#CA7;
+	text-align:center;
+	color:#fff;
+	border-bottom:1px solid #F6F7F8;
+	font-weight:400
+}
+.menu>ul>li a {
+	display:block;
+	background-color:#ddd;
+	padding:5px 10px;
+	font-size:16px;
+	cursor:pointer
+}
+.wrap {
+	width:735px;
+	min-height:700px;
+	border:1px solid #ccc;
+	margin:20px 0
+}
+.menu>ul>li a.active {
+	background-color:#eee;
+	border-left:2px solid #CA7
+}
+.menu>ul>li a:hover {
+	background-color:#eee!important;
+	border-left:2px solid #CA7!important
+}
+.menu>ul>li:hover a {
+	background-color:#ddd;
+	padding:5px 10px;
+	font-size:16px;
+	cursor:pointer;
+	border:0
+}
+
+td:nth-child(odd) {
+	background-color:#ddd
+}
+
+.wrap {
+	border-collapse:collapse
+}
+
+.wrap table tr {
+	min-height:30px
+}
+
+.wrap table tr th{
+	width: 10%;
+}
+
+
+.wrap table {
+	width:100%;
+	font-size:16px;
+	border-color:#aaa;
+	border:0;
+	border-top:1px solid #aaa;
+	border-collapse:collapse;
+	line-height:30px;
+	margin:20px auto;
+	text-align:center
+}
+
+.wrap table tr:nth-child(odd) {
+	background:#f9f5ee
+}
+
+.wrap table tr:hover {
+	background:#f8fadd
+}
+.wrap table tr th {
+	font-size:1.2em;
+	height:40px
+}
+
+.wrap table tr td {
+	text-align:center
+}
+.wrap table tr td button {
+	margin:2px;
+	padding:0 10px
+}
+.wrap table tr td button.del-repair-info {
+	background:#eaa;
+	border:0;
+	outline:0;
+	border-radius:4px
+}
+.wrap table.logTable {
+	width: auto;
+	font-size:16px;
+	border-color:#aaa;
+	border:0;
+	background: transparent;
+	border-top:1px solid #aaa;
+	border-collapse:collapse;
+	line-height:30px;
+	margin:20px auto;
+	text-align:center
+}
+.wrap table.logTable tr{
+	background: transparent;
+	height: 60px;
+}
+.wrap table.logTable tr th{
+	width: 120px;
+	padding: 0 10px;
+	text-align-last: justify;
+	font-size: 20px;
+}
+.wrap table.logTable tr td{
+	width: 200px;
+	background: transparent;
+}
+
+
+
+
+
+
+
+
+
+.pagechange {
+	text-align:center;
+	height:30px;
+	margin:10px 0
+}
+
+.pagechange a,.pagechange b {
+	display:inline-block;
+	font-weight:400;
+	font-size:100%;
+	padding:3px 10px;
+	margin:0 10px;
+	background:#a00;
+	font-family:helvetica;
+	border-radius:2px;
+	color:#fff;
+	cursor:pointer
+}
+.pagechange a:hover,.pagechange b:hover {
+	background:red;
+	color:#fff
+}
+.pagechange a.checked {
+	background:#666;
+	color:#fff;
+	cursor:auto
+}
+
+
+.wrap table tr td {
+	width:100px
+}
+.wrap table tr td.td-ul p {
+	height:30px;
+	line-height:30px
+}
+.wrap table tr td.td-ul input[type=text] {
+	width:80%
+}
+
+
+
+
+
+
+.wrap table tr td {
+	text-align:center;
+	min-height:100%
+}
+.wrap table tr td a {
+	font-size:40px;
+	margin:10px;
+	color:#600
+}
+
+.wrap table tr td button.change-repair-info {
+	/*display:none*/
+}
+.wrap table tr td button.del-staff-info {
+	background:#eaa;
+	border:0;
+	outline:0;
+	border-radius:4px
+}
+
+
+.wrap table input[type=text] {
+	width:100%;
+	height:100%;
+	line-height:100%;
+	font-size:1em;
+	border:0;
+	outline:0;
+	background:transparent;
+	padding:0 10px
+}
+
+
+
+.wrap table tr td.td-ul ul li {
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #bbb
+}
+
+.wrap h3 {
+	font-size:20px;
+	line-height:50px;
+	padding:0 0 0 1em;
+	height: 38px;
+}
+
+
+.wrap table tbody tr:nth-child(odd) {
+	background:#f9f5ee
+}
+.wrap table tbody tr:hover {
+	background:#f8fadd
+}
+
+
+
+.wrap table tr td button.del-store-info {
+	background:#eaa;
+	border:0;
+	outline:0;
+	border-radius:4px
+}
+
+
+.wrap table tr td.td-ul {
+	width:160px
+}
+
+.wrap table tr td.td-ul p input {
+	line-height:100%;
+	height:100%;
+	vertical-align:text-bottom
+}
+
+.wrap table tr td.td-ul p input[type=text]{
+	width: 75%;
+	height: 100%;
+}
+.wrap table tr td.td-ul p input[type=button]{
+	width: 24%;
+	height: 100%;
+}
+
+
+
+/*add-manager*/
+.headImg div {
+    position: relative;
+    display: inline-block;
+    background: #CCAA77;
+   margin:95px 29px ;
+    border-radius: 4px;
+    padding: 5px 12px;
+    overflow: hidden;
+    color: #fff;
+    text-indent: 0;
+    line-height: 20px;
+    opacity: 1;
+}
+.headImg div input {
+    position: absolute;
+    font-size: 100px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.headeImg div:hover {
+    opacity: .9;
+}
+.headImg{
+	width: 180px;
+	height: 230px;
+	border:1px solid #ccc;
+	margin:20px;
+}
+.save-manager li span{
+	text-align-last: justify;
+	display: inline-block;
+	min-width:65px;
+	padding:0 20px;
+}
+.save-manager{
+	padding-top:50px;
+}
+
+
+.save-manager  li input[type=text]{
+	height:30px;
+	padding-left:10px;
+}
+.save-manager li{
+	margin:20px 0;
+	position: relative;
+}
+.save-manager button{
+	width:200px;
+	text-align: center;
+	color:#fff;
+	background-color: #CCAA77;
+	border:none;
+	height:30px;
+	margin-left:40px;
+	outline:none;
+}
+button:hover{
+	opacity: .9;
+}
+
+
+.save-myInfo li span{
+	text-align-last: justify;
+	display: inline-block;
+	width:100px;
+	padding:0 20px;
+	line-height: 30px;
+	float: left;
+}
+
+.save-myInfo{
+	/*padding-top:50px;*/
+}
+.save-myInfo li input[type=text],.save-myInfo  li input[type=password]{
+	height:30px;
+	padding-left:10px;
+	/*line-height: 30px;*/
+}
+.save-myInfo  li textarea{
+	height:66px;
+	width: 182px;
+	padding-left:10px;
+	line-height: 30px;
+}
+.save-myInfo li{
+	margin:12px 0;
+}
+.save-myInfo button{
+	width:100px;
+	text-align: center;
+	color:#fff;
+	background-color: #CCAA77;
+	border:none;
+	height:30px;
+	margin-left:40px;
+	outline:none;
+}
+.update-table{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	display: none;
+	background-color: rgba(0,0,0,.2);
+}
+.update-table table{
+	width:800px;
+	position: absolute;
+	top:30%;
+	left:50%;
+	transform:translate(-50%,-50%)
+}
+.update-table table tbody{
+	font-size:15px;
+}
+.update-table button{
+	margin :0 10px;
+}
+.update-table div{
+	position: relative;
+	height:100%;
+}
+.save-myInfo li input[type=text],.save-myInfo  li input[type=password]{
+	height:30px;
+	padding-left:10px;
+	/*line-height: 30px;*/
+}
+.save-myInfo  li textarea{
+	height:66px;
+	width: 182px;
+	padding-left:10px;
+	line-height: 30px;
+	float: left;
+}
+/*.save-myInfo li span:after{
+	content: "：";
+	display: inline-block;
+	height: 100%;
+	width: 0px;
+}*/
+.save-myInfo li{
+	width: 76%;
+	margin: 10px auto;
+}
+.save-myInfo li b{
+	font-weight: normal;
+	padding: 0 10px;
+	color: #ccc;
+}
+.save-myInfo button{
+	width:100px;
+	text-align: center;
+	color:#fff;
+	background-color: #CCAA77;
+	border:none;
+	height:30px;
+	margin-left:40px;
+	outline:none;
+}
+
+
+.headImg div {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 80%;
+    color: #fff;
+    background: #CCAA77;
+    line-height: 20px;
+	margin:75px auto;
+    border-radius: 4px;
+    padding: 5px 0;
+    overflow: hidden;
+    /*text-indent: 0;*/
+    opacity: 0;
+    z-index: 10;
+}
+.headImg div input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    left: 0;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+.headImg{
+	position: relative;
+	display: block;
+	width: 180px;
+	height: 180px;
+	border:1px solid #ccc;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.headImg:hover div{
+	opacity: 1;
+}
+.headImg div:hover {
+    opacity: .9;
+}
+.headImg:hover a{
+	height: 30px;
+}
+.headImg>a{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	height: 0px;
+	line-height: 30px;
+	width: 60px;
+	text-align: center;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	color: #fff;
+    background: #CCAA77;
+    -webkit-transition: height .3s;
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    transition: height .3s;
+}
+.headImg>img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/*display: none;*/
+}

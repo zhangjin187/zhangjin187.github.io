@@ -1,0 +1,36 @@
+
+				<!--添加订单-->
+				<section class="wrap add-order l">
+					<h3>添加顾客预约信息</h3>
+					<table border="1" cellpadding="20">
+						<thead>
+							<tr>
+								<th width="18%">客户姓名</th>
+								<th>手机号</th>
+								<th>预约时间</th>
+								<th>预约项目</th>
+								<th>维修类型</th>
+								<!-- <th>修理工人</th> -->
+								<th>操作</th>
+							</tr>
+						</thead>
+						
+						<tbody ng-controller="add-order as orders">
+							<tr>
+								<td class="order-customer">
+									<select>
+										<option>未选择</option>
+										<option ng-repeat="x in orders.customerName" customId={{x.id}} ng-bind="x.name"></option>
+										
+									</select>
+								</td>
+								<td class="order-date"><input type="text"/></td>
+								<td class="order-date"><input type="text" id="dateinfo"/></td>
+								<td class="order-list"><input type="text" /></td>
+								<td class="order-repairer"><input type="text" /></td>
+								<td><button ng-click="orders.confirm($event)">确定</button></td>
+							</tr>
+						</tbody>
+						
+					</table>
+				</section>

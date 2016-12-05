@@ -1,0 +1,53 @@
+	<section class="wrap myInfo l clearfix" ng-controller="myInfo as info">
+		<h3>个人信息</h3>
+	
+		<input type="text" style="display:none" />
+		<ul class="save-myInfo">
+			<li>
+				<span>汽修厂头像</span>
+				<div class="headImg ">
+					<div>
+						点击更换
+						<input type="file" onchange="fileChang(this)" id="inputFile" />
+	
+					</div>
+					<img id="img1" src={{info.headImg}} alt="暂无头像" />
+					<a ng-click="info.upDataImg()" id="upImg" style="display:none" >上传</a>
+				</div>
+			</li>
+			<li>
+				<span>汽修厂名称</span>
+				<input type="text" 
+					placeholder="请输入名称" 
+
+					ng-model="info.factoryInfo.name" />
+				<!-- <b ng-hide=>汽修厂名称有误</b> -->
+			</li>
+			<li>
+				<span>登录密码</span>
+				<input type="password" 
+					placeholder="修改后的密码" 
+
+					ng-model="info.factoryInfo.changePassword" />
+				<b ng-bind="info.factoryInfo.passwordNotChange"=>6-16位数字和字母</b>
+			</li>
+			<li>
+				<span>确认密码</span>
+				<input type="password" 
+					placeholder="修改后的密码" 
+					ng-blur="info.changePwd()"
+					ng-model="info.factoryInfo.repeatPassword" />
+				<b ng-bind="info.factoryInfo.samePwd">与密码相同</b>	
+			</li>
+			<li class="clearfix">
+				<span style="text-align:top">地址</span>
+				<textarea placeholder="填写你的详细地址" ng-model="info.factoryInfo.address"></textarea>
+				<!-- <b style="float:left">请输入正确地址</b> -->
+			</li>
+			<li>
+				<button ng-click="info.checkInfo()">放弃修改</button><button ng-click="info.submit()">修改个人信息</button>
+			</li>
+			
+		</ul>
+
+	</section>

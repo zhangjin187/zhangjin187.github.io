@@ -1,0 +1,20 @@
+.banner .content{
+	position: relative;
+	margin-top:30px;
+	background:url(../img/jiubenzi-bg.png)  no-repeat;
+	height:400px;
+	background-size:cover;
+	background-position:center center;
+}
+.banner .intr{
+	position: absolute;
+	top:45px;
+	right:200px;
+	line-height:25px;
+}
+.intr h2{
+	font-size:25px;
+}
+.intr p{
+	margin-top:15px;
+}

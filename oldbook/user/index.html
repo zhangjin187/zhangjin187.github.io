@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="jgn">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="旧本子汽车维修查询服务，汽车维修记录查询，维修，汽车，旧本子" />
+		<meta name="Description" content="" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>旧本子汽车维修查询服务</title>
+		<!--[if IE]>
+			<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
+			<link rel="stylesheet" type="text/css" href="css/ie8.css"/>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="../css/header.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/personal-hub.css" />
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
+		<link rel="stylesheet" href="jedate/skin/jedate.css" />
+		<script type="text/javascript" src="../js/jQuery.js"></script>
+		<script src="../lib/angular/angular.js"></script>
+		<script src="../lib/angular/angular-cookies.js"></script>
+		<script src="../lib/angular/angular-route.js"></script>
+	</head>
+
+	<body>
+		
+		<header></header>
+		<section class="personal-hub">
+			<div class="content clearfix">
+				<!-- 左侧导航 -->
+				<div class="menulist"></div>
+				<!-- main -->
+				<section ng-view></section>
+			</div>
+		</section>
+		<footer ng-include="'../module/footer.html'"></footer>
+		<div id="sidebar" class="sidebar"></div>
+
+		
+		<script type="text/javascript" src="js/route.js"></script>
+		<script type="text/javascript" src="js/repair.js"></script>
+		<script type="text/javascript" src="js/staff.js"></script>
+		<script type="text/javascript" src="js/store.js"></script>
+		<script type="text/javascript" src="js/add-manager.js"></script>
+		<script type="text/javascript" src="js/customer.js"></script>
+		<script type="text/javascript" src="js/order.js"></script>
+		<script type="text/javascript" src="js/myInfo.js"></script>
+		<script type="text/javascript" src="js/storeCost.js"></script>
+		<script type="text/javascript" src="js/add-order.js"></script>
+		<script src="jedate/jquery.jedate.min.js"></script>
+	</body>
+	
+</html>
