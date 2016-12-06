@@ -10,8 +10,8 @@ app.config(["$routeProvider", function($routProvider){
 }]);
 
 
-// 查看维修控制器
-app.controller( 'checkstore',['$http', '$rootScope', function($http, $rootScope){
+// 查看维修项目类型控制器
+app.controller('checkstore',['$http', '$rootScope', function($http, $rootScope){
 	var self = this;
 	// console.log(this)
 
@@ -31,7 +31,7 @@ app.controller( 'checkstore',['$http', '$rootScope', function($http, $rootScope)
 	
 		.success(function(data){
 			if(data.code == '0000'){
-				// console.log(data,data.data);
+				 console.log(data.data);
 	
 				self.datas = data.data;
 			}else{

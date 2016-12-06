@@ -14,6 +14,9 @@ app.controller('myInfo', ['$http', '$rootScope', function($http, $rootScope){
 		factoryId : $rootScope.factoryId,
 		id : $rootScope.factoryId
 	};
+	self.repairTypeArr = function (){
+		
+	}
 	// console.log(postData(self.sendData));
 	self.checkInfo = function(){
 		$http({

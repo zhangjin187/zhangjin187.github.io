@@ -116,8 +116,8 @@ app.controller( 'addstaff',['$http', '$rootScope', function($http, $rootScope){
 	self.sureAdd = function(){
 		console.log(this)
 		self.addObj = {};
-		var telReg = /^1[3,5,4,7,8]{1}\d{9}/
-		if(!telReg.test(self.mobile)) {
+		var telReg = /^1[3,5,4,7,8]{1}\d{9}/;
+		if(!telReg.test(self.tel)) {
 			alert("请输入正确的电话号码");
 			return;
 		}

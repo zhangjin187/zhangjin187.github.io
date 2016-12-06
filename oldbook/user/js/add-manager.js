@@ -76,7 +76,6 @@ app.controller('checkmanager', ['$http', function($http) {
 		for(var prop in self.changeData){
 			self.changeData[prop] = self.datas[e][prop];
 		}
-		console.log(self.changeData)
 //		updateData.id=self.changeData.id;
 	}
 	self.del = function(e) {

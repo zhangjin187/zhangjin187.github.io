@@ -48,9 +48,7 @@ app.controller('addstoreCost', ['$http', '$rootScope', function($http, $rootScop
 	}
 }])
 
-app.controller('delstoreCost', ['$http', '$rootScope', function($http, $rootScope){
 
-}])
 
 app.controller('checkstoreCost', ['$http', '$rootScope', function($http, $rootScope){
 	var self = this;
@@ -77,6 +75,30 @@ app.controller('checkstoreCost', ['$http', '$rootScope', function($http, $rootSc
 				// console.log(data,data.data);
 			}
 		})
+		
+
+	}
+	self.del=function(e){
+		var delData={
+			id:angular.element(e.target).parents("tr").attr("dataid")
+		}
+		$http({
+			method	: 'POST',
+			url     : 'http://139.129.222.154:8080/car/app/car/factory/deleteRepareFeeItem.do',
+			data    : postData(delData),
+			headers : {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			}
+		})
+		.success(function(data){
+			if(data.code == '0000'){
+				location.reload();
+				self.datas = data.data;
+			}else{
+				console.log(data.errorMessage)
+				// console.log(data,data.data);
+			}
+		})
 	}
 	self.init = function (){
 	
@@ -84,5 +106,48 @@ app.controller('checkstoreCost', ['$http', '$rootScope', function($http, $rootSc
 		this.checkCost();
 	}
 	self.init();
+	self.update=function(e){
+		$(".check-store .update-table").show();
+		self.changeData = {
+//			factoryId:'18',
+			id:null,
+			name:"",
+			createTime : '',
+			primaryPrice: null,
+			salePrice : null,
+			number: null,
+			memo:""
+		};
+		console.log(self.datas);
+		for(var prop in self.changeData){
+			self.changeData[prop] = self.datas[e][prop];
+		}
+//		self.changeData.factoryId = 18;
+	}
+	
+	self.confirm=function(e){
+			console.log(self.changeData);
+			$http({
+				method: 'POST',
+				url: 'http://139.129.222.154:8080/car/app/car/factory/updateRepareFeeItem.do',
+				data: postData(self.changeData),
 
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
+				}
+
+			})
+			.success(function(data) {
+				if(data.code == '0000') {
+					console.log(data.successMessage)
+					location.reload();
+				} else {
+					console.log(data)
+				}
+			})
+	}
+		$(".update-table  .cancel").on("click",function(e){
+		$(".update-table").hide()
+	
+})
 }])

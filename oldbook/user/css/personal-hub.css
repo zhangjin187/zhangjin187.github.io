@@ -227,7 +227,12 @@ td:nth-child(odd) {
 .wrap table tr td.td-ul ul li {
 	height:30px;
 	line-height:30px;
-	border-bottom:1px solid #bbb
+	/*border-bottom:1px solid #bbb*/
+}
+.wrap table tr td.td-ul ul li input[type=text]{
+	width: 40%;
+	border: 1px solid #add;
+	text-align: right;
 }
 
 .wrap h3 {
@@ -273,7 +278,28 @@ td:nth-child(odd) {
 	width: 24%;
 	height: 100%;
 }
+.wrap table tr td table{
+	/*border: 0;*/
+	border-color: #666;
+	width: 500px;
+	background: transparent;
+}
 
+.wrap table tr td>table.intable tr,
+.wrap table tr td>table.intable tr th,
+.wrap table tr td>table.intable tr td{
+	/*border: 0*/
+	font-size: 16px;
+	width: 30px;
+	background: transparent;
+	height: 10px;
+}
+.wrap table tr td>table.intable tr:hover{
+	background: transparent;
+}
+.wrap table tr td>table.intable input[type=text]{
+	padding: 0 2px;
+}
 
 
 /*add-manager*/

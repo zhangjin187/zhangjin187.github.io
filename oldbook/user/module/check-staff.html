@@ -1,6 +1,6 @@
 
 				<!--查看维修记录-->
-				<section class="wrap check-repair l">
+				<section class="wrap check-repair l" ng-controller="checkstaff as staffs">
 					<h3>员工管理</h3>
 					<div class="check-table">
 						<table border="1">
@@ -16,7 +16,7 @@
 									<!-- <th></th> -->
 								</tr>
 							</thead>
-							<tbody ng-controller="checkstaff as staffs">
+							<tbody >
 								<tr ng-controller="staffs as staff" title="点击查看详情" ng-repeat="data in staffs.datas" workerId={{data.id}}>
 									<td> {{data.name}} </td>
 									<td> {{data.createTime}} </td>

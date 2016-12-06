@@ -11,33 +11,43 @@
 							<tr>
 								<th>顾客</th>
 								<td>
-									<input name="customerName" list="customerName" placeholder="输入客户信息" ng-model="newrepair.name" type="text">
-									<datalist id="customerName">
-										<option value="121232">121232</option>
-										<option value="13423">13423</option>
-										<option value="15435">15435</option>
-									</datalist>
+									<!-- <select ng-model="newrepair.customer">
+										<option value="未选择">未选择</option>
+										<option ng-repeat="customer in newrepair.customerArr" value="newrepair.customerArr()" ng-bind="customer.name"></option>
+									</select> -->
+									<select ng-model="newrepair.addRepair.userId"
+											ng-options="customer.id as customer.name for customer in newrepair.customerArr">
+										<!-- ="customer.name for customer in newrepair.customerArr" -->
+										<option>0</option>
+									</select>
 								</td>
 							</tr>
 							<tr>
 								<th>修理人</th>
 								<td>
-									<input placeholder="修理人" type="text" list="repair-staff">
+									<!-- <input placeholder="修理人" type="text" list="repair-staff">
 									<datalist id="repair-staff">
 										<option>老张</option>
 										<option>老李</option>
 										<option>老王</option>
 										<option>老赵</option>
-									</datalist>
+									</datalist> -->
+									<select ng-model="newrepair.addRepair.workerId"
+											ng-options="worker.id as worker.name for worker in newrepair.workerArr">
+										<!-- <option value="未选择">未选择</option> -->
+									<!-- 	<option ng-repeat="worker in newrepair.workerArr" value="worker.name" ng-bind="worker.name"></option> -->
+										<!-- <option></option> -->
+									</select>
+									<!-- <p>seelgg {{newrepair.addRepair.workerId}}</p> -->
 								</td>
 							</tr>
 							<tr>
 								<th>开始时间</th>
-								<td></td>
+								<td><input type="text" class="repairTime"></td>
 							</tr>
 							<tr>
 								<th>结束时间</th>
-								<td></td>
+								<td><input type="text" class="repairTime"></td>
 							</tr>
 							<tr>
 								<th>工时</th>
@@ -45,9 +55,21 @@
 							</tr>
 							<tr>
 								<th>修理类型</th>
-								<td class="td-ul">
-									<ul class="add-repair-ul">
-										<li ng-dblclick="newrepair.delrepairType($index)" ng-repeat="repairType in newrepair.repairTypes track by $index">{{repairType}}</li>
+								<td class="checkbox">
+									<p style="text-align:left" ng-repeat="repairType in newrepair.repairTypes track by $index">
+										<label>
+											<input type="checkbox" id="aaa" ng-model="repairType.checked">
+											<span ng-bind="repairType.name"></span>
+										</label>
+									</p>
+									<!-- <ul>
+										<li ng-dblclick="newrepair.delrepairType($index)"ng-repeat="repairType in newrepair.repairTypes track by $index">
+											<input type="checkbox" id="aaa">
+											<label for="aaa" ng-bind="r">wrewrwe</label>
+										</li>
+									</ul> -->
+									<!-- <ul class="add-repair-ul">
+										<li ng-dblclick="newrepair.delrepairType($index)" title="双击可删除" ng-repeat="repairType in newrepair.repairTypes track by $index" ng-bind="repairType"></li>
 									</ul>
 									<p>
 										<input type="text" placeholder="输入修理类型" ng-model="newrepair.newType" list="repair-type">
@@ -58,26 +80,51 @@
 											<option>15</option>
 										</datalist>
 										<input class="add-repair-type r" ng-click="newrepair.addrepairType()" type="button" value="添加" />
-									</p>
+									</p> -->
 								</td>
 							</tr>
 							<tr>
 								<th>费用条目</th>
-								<td class="td-ul">
-									<ul class="add-repair-ul">
-										<li ng-dblclick="newrepair.delrepairType($index)" ng-repeat="repairType in newrepair.repairTypes track by $index">{{repairType}}</li>
-									</ul>
-									<p>
-										<input type="text" placeholder="输入修理类型" ng-model="newrepair.newType" list="repair-type">
-										<datalist id="repair-type">
-											<option>修车等1888</option>
-											<option>发动机</option>
-											<option>14</option>
-											<option>15</option>
-										</datalist>
-										<input class="add-repair-type r" ng-click="newrepair.addrepairType()" type="button" value="添加" />
-									</p>
+								<td class="td-ul" colspan="8">
+									<table class="intable" border="1"> 
+										<thead>
+											<tr>
+												<th>条目</th>
+												<th>单价</th>
+												<th>数量</th>
+												<th>操作</th>
+												<th>总价</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr title="双击可删除"  ng-repeat="newMoney in newrepair.repairMoneys track by $index">
+												<td ng-bind="newMoney.type"></td>
+												<td></td>
+												<td></td>
+												<td><input type="button" value="删除"></td>
+												<td rowspan="100"></td>
+											</tr>
+										</tbody>
+
+										<tfoot>
+											<tr>
+												<td>
+												
+													<select
+														ng-model="newrepair.repairCost"
+														ng-options=" worker.name for worker in newrepair.repairCostArr">
+													</select>
+												</td>
+												<td><span ng-bind="newrepair.repairCost.salePrice"></span></td>
+												<td><input type="text" placeholder="使用数量" ng-model="newrepair.repairCost.useNum"></td>
+												<td><input type="button" value="添加" ng-click="newrepair.addrepairMoney()" ></td>
+											</tr>
+											
+										</tfoot>
+
+									</table>
 								</td>
+								<!-- <td></td> -->
 							</tr>
 							<tr>
 								<th>费用(元)</th>
@@ -88,7 +135,7 @@
 							<tr>
 								<th>操作</th>
 								<td title="">
-									<p><button class="no-add">放弃</button><button class="add-info" ng-click="newrepair.addrepairHttp()">保存</button></p>
+									<p><button class="no-add">放弃</button><button class="add-info" ng-click="newrepair.addrepair()">保存</button></p>
 								</td>
 							</tr>
 							
